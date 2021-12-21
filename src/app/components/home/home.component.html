@@ -1,0 +1,7 @@
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let persona of response$">
+            <app-personcard [persona]="persona"></app-personcard>
+        </div>
+    </div>
+</div>

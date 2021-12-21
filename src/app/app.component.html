@@ -1,24 +1,2 @@
-<!DOCTYPE html>
-<mat-toolbar color="primary">
-    Angular Demo
-</mat-toolbar>
-<div class="content">
-    <div fxLayout="row wrap" fxLayoutGap="16px grid">
-        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let persona of response$.persone">
-            <mat-card class="mat-elevation-z4">
-                <mat-card-title class="text-oneline">
-                    {{persona.nome}} {{persona.cognome}}
-                </mat-card-title>
-                <img *ngIf="persona.sesso == 'm'" src="https://thumbs.dreamstime.com/b/businessman-icon-image-male-avatar-profile-vector-glasses-beard-hairstyle-179728610.jpg">
-                <img *ngIf="persona.sesso == 'f'" src="https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/60-512.png">
-                <mat-card-content>
-                    <p>Sesso: {{persona.sesso}}</p>
-                    <p>Data nascita: {{persona.dataNascita}}</p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <button (click)="deleteUser(persona.id)" mat-button>DELETE</button>
-                </mat-card-actions>
-            </mat-card>
-        </div>
-    </div>
-</div>
+<app-toolbar></app-toolbar>
+<app-home></app-home>

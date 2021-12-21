@@ -1,0 +1,20 @@
+.mat-card {
+    margin-bottom: 16px;
+}
+
+.column-label {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.text-oneline {
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

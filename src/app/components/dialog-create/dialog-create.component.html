@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>{{type}} Person</h1>
+<mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Ex. Mario" [(ngModel)]="persona.nome">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Ex. Rossi" [(ngModel)]="persona.cognome">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Birthday</mat-label>
+        <input matInput [matDatepicker]="datepicker" [(ngModel)]="persona.dataNascita">
+        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker>
+            <mat-datepicker-actions>
+                <button mat-button matDatepickerCancel>Cancel</button>
+                <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+            </mat-datepicker-actions>
+        </mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Sex</mat-label>
+        <mat-select [(ngModel)]="persona.sesso">
+            <mat-option value="m">Male</mat-option>
+            <mat-option value="f">Female</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-dialog-content>
+<div mat-dialog-actions>
+    <button mat-button (click)="onDismiss()">Dismiss</button>
+    <button mat-button [mat-dialog-close]="persona">Add</button>
+</div>
